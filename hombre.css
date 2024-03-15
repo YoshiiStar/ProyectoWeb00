@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&display=swap');
+
+*{
+    margin: 0; /* Eliminar márgenes predeterminados */
+    padding: 0; /* Eliminar relleno predeterminado */
+    border: 0; /* Eliminar bordes predeterminados */
+    box-sizing: border-box; /* Incluye relleno y borde en el tamaño total */
+    font-size: 100%; /* Tamaño de fuente al 100% */
+    vertical-align: baseline; /* Alineación vertical básica */
+}
+
+/* Estilos específicos del cuerpo */
+body{
+    font-family: 'Open Sans'; /* Fuente de la página */
+    text-align: center; /* Centrar texto */
+}
+
+.head{
+    background-color: #f2f2f2; /* Color de fondo del encabezado */
+    text-align: center; /* Centrar texto */
+    padding: 25px 0; /* Relleno superior e inferior */
+    display: flex; /* Usar flexbox */
+    justify-content: space-evenly; /* Espaciado uniforme entre elementos */
+    align-items: center; /* Alinear elementos verticalmente */
+    position: fixed; /* Fijar posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 100;
+}
+/* Barra de navegación */
+.navbar{
+    display: flex; /* Usar flexbox */
+    margin-right: 10px; /* Margen derecho */
+}
+
+ .navbar a{
+    display: inline-block; /* Mostrar como bloque en línea */
+    text-decoration: none; /* Eliminar subrayado */
+    color: #696969; /* Color del texto */
+    margin: 0 30px; /* Márgenes izquierdo y derecho */
+    padding: 5px 15px; /* Relleno interno */
+    border-radius: 30px; /* Bordes redondeados */
+}
+
+.navbar a:hover{
+    background-color: #000; /* Fondo negro al pasar el ratón */
+    color: #fff; /* Texto blanco al pasar el ratón */
+}
+
+    
+/* Logo */
+.logo{
+    margin-left: 30px; /* Margen izquierdo */
+}
+
+.logo a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 20px; /* Tamaño de la fuente */
+}
+
+.logo img {
+    width: 190px; /* Ancho de la imagen */
+    height: 70px; /* Altura de la imagen */
+}
+
+.header {
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.header {
+    height: 80vh !important; /* Altura del 80% de la ventana gráfica */
+    background: url(IMG/Fondo/hyp.webp) no-repeat center;
+    background-attachment: fixed; /* Fijar fondo */
+    background-size: cover; /* Cubrir completamente */
+}
+
+  /* Estilos de la barra lateral */
+.barra-lateral{
+    position: fixed; /* Fijar posición */
+    display: block; /* Mostrar como bloque */
+    top: 174px; /* Espaciado desde la parte superior */
+    left: 0; /* Alinear a la izquierda */
+    width: 300px; /* Ancho de la barra lateral */
+    height: 100%; /* Altura completa */
+    background: #f2f2f2; /* Fondo de la barra lateral */
+}
+    
+
+.barra-lateral ul{
+    padding: 0; /* Eliminar relleno */
+    text-align: center; /* Centrar texto */
+    width: 100%; /* Ancho completo */
+}
+
+       /* Estilos del botón de descuentos */
+
+       .descu{
+        display: block; /* Mostrar como bloque */
+        position: fixed; /* Fijar posición */
+        text-align: center; /* Centrar texto */
+        font-size: 24px; /* Tamaño de la fuente */
+        top: 130px; /* Espaciado desde la parte superior */
+        width: 100%; /* Ancho completo */
+        text-decoration: none; /* Eliminar subrayado */
+        color: #fff; /* Color del texto */
+        padding-top: 3px; /* Relleno superior */
+        padding-bottom: 3px; /* Relleno inferior */
+        justify-content: space-around; /* Espaciado uniforme */
+        flex-wrap: wrap; /* Ajustar elementos flexibles */
+        background: #bebaba; /* Fondo del botón */
+        text-transform: uppercase; /* Texto en mayúsculas */
+        font-weight: bold; /* Texto en negrita */
+    }
+    /* Cuando el cursor está sobre un elemento con la clase .descu */
+    .descu:hover{
+          /* Cambia el color de fondo a un gris más oscuro */
+        background-color: rgb(180, 178, 178);
+        /* Cambia el color del texto a blanco */
+        color: #fff; 
+    }
+
+    /* Encabezados y listas de la barra lateral */
+    .info_pre{
+        text-align: center; /* Centrar texto */
+        font-size: 21px; /* Tamaño de la fuente */
+        padding: 50px;/* Relleno superior */
+        cursor: default;
+        user-select: none;/* Usuario no selecciona */
+    }
+
+    .list-pre{
+    list-style: none; 
+    padding: 50px;
+    text-decoration: none;
+    background: whitesmoke; 
+    user-select: none; 
+    }
+    
+   /* Botones de precio */
+    .precio_bt{
+        text-decoration: none; /* Eliminar subrayado */
+        font-size: 20px; /* Tamaño de la fuente */
+        user-select: none; /* Usuario no selecciona */
+        color: #000;  /* Texto negro */
+    }     
+
+/* Contenido */
+
+    .containerpri{
+        padding-top: 190px;
+        margin-left: 30%;
+        
+    }
+
+    .flex{
+        display: flex; /* Usar flexbox */
+        flex-wrap: wrap; /* Ajustar elementos flexibles */
+        
+    }
+
+    .center{
+        text-align: center; /* Centrar texto */
+    }
+
+    .box{
+        margin: 1%; /* Margen */
+        border-radius: 10px; /* Borde de la caja */
+        width: 28%; /* Ancho de la caja */
+        padding: 1em 1em 1em 1em; /* Relleno */
+        border: 1px solid #000; /* Borde de la caja */
+    }
+    
+    
+
+       /* Estilos del nombre del producto */
+
+    .N-P{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px; /* Tamaño de la fuente */
+        font-weight: bold;
+        size: 12px;
+    }
+
+        /* Estilos del botón de compra */
+
+    .comprar{
+        display: inline-block;  /* Mostrar como bloque en línea */
+        text-align: center; /* Centrar texto */
+        justify-content: center;
+        text-decoration: none; /* Eliminar subrayado */
+        padding: 5px 15px; /* Relleno interno */
+        border-radius: 30px; /* Bordes redondeados */
+        background: #696969; /* Fondo */
+        color:#fff; /* Color del texto */
+
+    }
+
+    /* Estilos para la clase .Precio-Nike */
+    .Precio-Nike {
+        font-weight: bold; /* Hace que el texto tenga un peso de fuente en negrita */
+    }
+    
+    /* Estilos para la clase .comprar al pasar el mouse sobre ella */
+    .comprar:hover {
+        background-color: rgb(239, 233, 233); /* Cambia el color de fondo al pasar el mouse */
+        color: black; /* Cambia el color del texto al pasar el mouse */
+    }
+
+   /* Estilos para dispositivos móviles */
+   @media screen and (max-width: 600px) {
+   
+   .barra-lateral {
+        width: 100%; /* Ancho completo para la barra lateral */
+        position: static; /* Posición estática para la barra lateral */
+        margin-top: 3%; /* Margen superior del 30% respecto al contenedor padre */
+    }
+
+
+
+    body {
+        font-size: 14px; /* Tamaño de fuente reducido para dispositivos pequeños */
+    }
+
+    .containerpri {
+        padding-top: 50px; /* Espacio de relleno en la parte superior del contenedor principal */
+        margin-left: 15%; /* Margen izquierdo del 15% respecto al contenedor padre */
+        margin-right: 15%; /* Margen derecho del 15% respecto al contenedor padre */
+    }
+
+    .head {
+        flex-direction: column; /* Dirección de los elementos en columna en dispositivos pequeños */
+        padding: 5px 0; /* Espacio de relleno vertical de 5px y sin espacio horizontal */
+    }
+
+    .logo {
+        margin-bottom: 15px; /* Margen inferior de 15px para el logo */
+    }
+
+    .navbar {
+        position: relative; /* Posición relativa para la barra de navegación */
+        margin: 10px 0; /* Margen de 10px arriba y abajo */
+    }
+
+    .navbar a {
+        margin: 0 15px; /* Margen de 0 a los lados y 15px arriba y abajo para los enlaces de la navegación */
+        padding: 3px 2px; /* Relleno de 3px vertical y 2px horizontal para los enlaces */
+    }
+
+    .descu {
+        width: 100%; /* Ancho completo para el elemento .descu */
+        padding-top: 167px; /* padding superior del 150px */
+        position: static; /* Posición estática para .descu */
+        flex-direction: column; /* Dirección de los elementos en columna dentro de .descu */
+    }
+
+
+    .box {
+        width: 100%; /* Ancho completo para los elementos .box */
+        margin-bottom: 20px; /* Margen inferior de 20px para separar los elementos */
+        flex-direction: row; /* Dirección de los elementos en fila dentro de .box */
+    }
+
+    .box img {
+        max-width: 100%; /* Imágenes dentro de .box ajustadas al 100% de su contenedor */
+    }
+
+    .conta {
+        display: block; /* Mostrar como elemento de bloque */
+        border-radius: 4%;
+        padding-top: 1%; /* Espacio de relleno en la parte superior del elemento */
+        background: #696969; /* Fondo gris oscuro */
+        justify-content: center; /* Alinear contenido al centro (solo aplicable a elementos flex) */
+        margin-right: 14%; /* Margen derecho */
+    }
+}
+/* Estilos para tablets */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .barra-lateral {
+        width: 45%; /* Ancho de la barra lateral en tablets */
+    }
+
+    .containerpri {
+        padding-top: 150px; /* Espacio de relleno en la parte superior del contenedor principal */
+        margin-left: 0%; /* Margen izquierdo del 0% respecto al contenedor padre */
+    }
+
+    .box {
+        width: 45%; /* Ancho del elemento .box en tablets */
+    }
+
+    .box img {
+        max-width: 100%; /* Imágenes dentro de .box ajustadas al 100% de su contenedor */
+    }
+}
+
+/* Estilo adicional para la clase .comprar fuera del media query */
+.comprar {
+    text-align: center; /* Centrar el texto dentro del contenedor */
+    justify-content: center; /* Alinear el contenido al centro (solo aplicable a elementos flex o grid) */
+}
+
+    @media screen and (min-width: 1025px) {
+        .barra-lateral {
+            width: 300px; /* Ancho fijo de la barra lateral en computadoras grandes */
+        }
+    
+        .containerpri {
+            padding-top: 190px; /* Espacio de relleno en la parte superior del contenedor principal */
+            margin-left: 30%; /* Margen izquierdo del 30% respecto al contenedor padre */
+        }
+    
+        .box {
+            width: 28%; /* Ancho del elemento .box en computadoras grandes */
+        }
+        
+        .box img {
+            max-width: 100%; /* Imágenes dentro de .box ajustadas al 100% de su contenedor */
+        }
+    }

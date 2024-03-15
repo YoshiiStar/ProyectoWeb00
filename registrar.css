@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-layout {
+    display: flex;
+    height: 100vh;
+}
+
+/* ─── Panel izquierdo ─── */
+
+.auth-brand {
+    width: 360px;
+    flex-shrink: 0;
+    background: #101010;
+    background-image: url('IMG/slider/slider2.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.auth-brand::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.78);
+}
+
+.auth-brand > * { position: relative; z-index: 1; }
+
+.brand-logo-link { display: block; margin-bottom: 32px; }
+
+.brand-logo {
+    width: 160px;
+    height: 60px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.brand-tagline {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.brand-sub {
+    font-size: 14px;
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* ─── Panel derecho ─── */
+
+.auth-panel {
+    flex: 1;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.auth-form-wrap {
+    width: 100%;
+    max-width: 500px;
+    padding-top: 20px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 28px;
+    transition: color .2s;
+}
+
+.back-link:hover { color: #000; }
+
+.auth-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #101010;
+    margin-bottom: 6px;
+}
+
+.auth-sub {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 24px;
+}
+
+/* ─── Formulario ─── */
+
+.auth-form { display: flex; flex-direction: column; gap: 14px; }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1rem;
+    color: #bbb;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    font-size: 13px;
+    font-family: inherit;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 8px;
+    background: #fafafa;
+    outline: none;
+    transition: border-color .2s;
+    color: #222;
+}
+
+.input-group input:focus {
+    border-color: #101010;
+    background: #fff;
+}
+
+.input-group input::placeholder { color: #bbb; }
+
+.toggle-pass {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #bbb;
+    font-size: 1rem;
+    padding: 4px;
+    transition: color .2s;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-pass:hover { color: #101010; }
+
+/* ─── Botón ─── */
+
+.btn-auth {
+    width: 100%;
+    padding: 13px;
+    background: #101010;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: .5px;
+    transition: background .2s;
+    margin-top: 4px;
+}
+
+.btn-auth:hover { background: #333; }
+
+.auth-switch {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+.auth-switch a {
+    color: #101010;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-switch a:hover { text-decoration: underline; }
+
+/* ─── Responsive ─── */
+
+@media (max-width: 768px) {
+    body { overflow: auto; }
+
+    .auth-layout { flex-direction: column; height: auto; min-height: 100vh; }
+
+    .auth-brand {
+        width: 100%;
+        height: 160px;
+        padding: 20px;
+    }
+
+    .brand-tagline { font-size: 20px; }
+    .brand-sub { display: none; }
+
+    .auth-panel { padding: 24px 20px 48px; }
+
+    .form-row { grid-template-columns: 1fr; }
+}

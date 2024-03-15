@@ -1,0 +1,606 @@
+/* ── Icono de carrito en navbar (aplica a todas las páginas) ── */
+.carrito-nav {
+    position: relative;
+    font-size: 1.3rem !important;
+    padding: 6px 10px !important;
+    display: flex;
+    align-items: center;
+}
+
+.carrito-badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #e53935;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ── Botón "Agregar al carrito" dentro de .box ── */
+.btn-agregar-carrito {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px 12px;
+    background: #101010;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+    letter-spacing: .4px;
+}
+
+.btn-agregar-carrito:hover { background: #333; }
+.btn-agregar-carrito i { vertical-align: middle; margin-right: 4px; }
+
+/* ── Página del carrito ── */
+.carrito-page {
+    min-height: calc(100vh - 80px);
+    padding: 120px 40px 60px;
+    background: #f9f9f9;
+}
+
+.carrito-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carrito-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #101010;
+}
+
+.carrito-titulo i { vertical-align: middle; margin-right: 8px; }
+
+/* Vacío */
+.carrito-vacio {
+    text-align: center;
+    padding: 80px 20px;
+    color: #888;
+}
+
+.carrito-vacio i {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 16px;
+    color: #ccc;
+}
+
+.carrito-vacio p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+/* Grid carrito */
+.carrito-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Items */
+.carrito-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.carrito-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f4f4f4;
+    flex-shrink: 0;
+}
+
+.item-info { flex: 1; min-width: 0; }
+.item-info h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: #101010; }
+.item-info p  { font-size: 12px; color: #888; margin-bottom: 4px; }
+.item-precio  { font-size: 14px; font-weight: 600; color: #101010 !important; }
+
+.item-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.item-cantidad form { margin: 0; }
+
+.btn-cantidad {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .15s;
+}
+
+.btn-cantidad:hover { background: #f0f0f0; }
+
+.cantidad-num {
+    min-width: 28px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.item-subtotal {
+    font-weight: 700;
+    font-size: 15px;
+    color: #101010;
+    min-width: 80px;
+    text-align: right;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #bbb;
+    font-size: 1.2rem;
+    padding: 6px;
+    border-radius: 6px;
+    transition: color .2s, background .2s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-eliminar:hover { color: #e53935; background: #ffeaea; }
+
+/* Resumen */
+.carrito-resumen,
+.pago-resumen {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    position: sticky;
+    top: 100px;
+}
+
+.carrito-resumen h2,
+.pago-resumen h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: #101010;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.envio-gratis { color: #2e7d32; font-weight: 700; }
+
+.envio-info {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 700;
+    color: #101010;
+    border-top: 1px solid #eee;
+    padding-top: 14px;
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.btn-checkout {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #101010;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background .2s;
+    margin-bottom: 10px;
+}
+
+.btn-checkout:hover { background: #333; }
+
+.btn-seguir {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.btn-seguir:hover { color: #101010; }
+
+/* ── Página de pago ── */
+.pago-page {
+    min-height: calc(100vh - 80px);
+    padding: 120px 40px 60px;
+    background: #f9f9f9;
+}
+
+.pago-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pago-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #101010;
+}
+
+.pago-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: start;
+}
+
+.pago-form { display: flex; flex-direction: column; gap: 24px; }
+
+.form-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.form-section h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #101010;
+}
+
+.form-section h2 i { vertical-align: middle; margin-right: 6px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+.form-group label { font-size: 12px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .5px; }
+
+.form-group input {
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #101010;
+    transition: border-color .2s;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus { border-color: #101010; }
+
+/* Métodos de pago */
+.metodos-pago { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+.metodo-option input[type="radio"] { display: none; }
+
+.metodo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 10px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+    text-align: center;
+}
+
+.metodo-box i { font-size: 1.6rem; color: #555; }
+.metodo-box strong { font-size: 12px; color: #101010; }
+.metodo-box small { font-size: 11px; color: #aaa; }
+
+.metodo-option input[type="radio"]:checked + .metodo-box {
+    border-color: #101010;
+    background: #f5f5f5;
+}
+
+.metodo-option input[type="radio"]:checked + .metodo-box i { color: #101010; }
+
+.btn-pagar {
+    padding: 16px;
+    background: #101010;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s;
+    font-family: inherit;
+    letter-spacing: .3px;
+}
+
+.btn-pagar:hover { background: #333; }
+
+/* Items resumen en pago */
+.pedido-items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+
+.pedido-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #444;
+}
+
+.pedido-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #f4f4f4;
+    flex-shrink: 0;
+}
+
+.pedido-item-info { flex: 1; min-width: 0; }
+.pedido-item-info p { font-weight: 600; font-size: 12px; color: #101010; }
+.pedido-item-info small { color: #aaa; }
+.pedido-item > span { font-weight: 700; white-space: nowrap; }
+
+/* ── Página de confirmación ── */
+.confirmacion-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+    background: #f9f9f9;
+}
+
+.confirmacion-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 60px 48px;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0,0,0,.08);
+}
+
+.confirmacion-icon {
+    font-size: 5rem;
+    color: #2e7d32;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.confirmacion-card h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #101010;
+}
+
+.pedido-numero {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 16px;
+    background: #f4f4f4;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.confirmacion-msg {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.confirmacion-contacto {
+    font-size: 14px;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.confirmacion-contacto i { vertical-align: middle; margin-right: 4px; font-size: 1.1rem; }
+
+/* ── Panel QR Yape ── */
+.yape-qr-box {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    background: linear-gradient(135deg, #f5eeff 0%, #fff 100%);
+    border: 2px solid #6b21a8;
+    border-radius: 14px;
+    padding: 20px 24px;
+}
+
+.yape-qr-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.yape-qr-der {
+    flex: 1;
+}
+
+.yape-instruc {
+    font-size: 15px;
+    font-weight: 700;
+    color: #3b0764;
+    margin-bottom: 10px;
+}
+
+.yape-apps {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.yape-tag {
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.yape-color { background: #6b21a8; color: #fff; }
+.plin-color { background: #0ea5e9; color: #fff; }
+
+.yape-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 4px;
+}
+
+.yape-monto {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #3b0764;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.yape-nota {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #e9d5ff;
+}
+
+/* ── Panel Tarjeta ── */
+.tarjeta-info-box {
+    background: linear-gradient(135deg, #f0f7ff 0%, #fff 100%);
+    border: 2px solid #1a56db;
+    border-radius: 14px;
+    padding: 20px 24px;
+}
+
+.tarjeta-logos {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.card-tag {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.visa-tag   { background: #1a1f71; color: #fff; }
+.mc-tag     { background: #eb001b; color: #fff; }
+.amex-tag   { background: #007bc1; color: #fff; }
+.diners-tag { background: #555; color: #fff; }
+
+.tarjeta-nota {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    border: 1px solid #c7d7f5;
+    margin: 0;
+}
+
+/* Error de pago */
+.pago-error-msg {
+    background: #ffeaea;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.pago-error-msg i { vertical-align: middle; margin-right: 6px; font-size: 1.1rem; }
+
+.metodo-pronto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 10px;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #bbb;
+}
+
+.metodo-pronto i { font-size: 1.6rem; }
+.metodo-pronto strong { font-size: 12px; }
+.metodo-pronto small { font-size: 11px; }
+
+@media (max-width: 500px) {
+    .yape-qr-box { flex-direction: column; text-align: center; }
+    .yape-apps { justify-content: center; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+    .carrito-grid,
+    .pago-grid { grid-template-columns: 1fr; }
+    .carrito-page,
+    .pago-page { padding: 100px 20px 40px; }
+    .metodos-pago { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .carrito-item { flex-wrap: wrap; }
+    .item-subtotal { min-width: unset; }
+}

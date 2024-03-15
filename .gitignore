@@ -1,0 +1,16 @@
+# Dependencias y caché
+/vendor/
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# XAMPP / PHP local
+/nbproject/
+*.bak
